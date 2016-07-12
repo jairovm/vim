@@ -12,6 +12,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-rails'
+Plugin 'jpo/vim-railscasts-theme'
 
 
 " All of your Plugins must be added before the following line
@@ -34,7 +36,7 @@ autocmd BufWritePre *.md,*.js,*.rb,*.html,*.haml,*.erb,*.css,*.sass,*.coffee,*.y
 
 " Color
 set t_Co=256
-"colors railscasts
+colors railscasts
 " Ruby {
    " ruby standard 2 spaces, always
        au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
