@@ -1,0 +1,32 @@
+#!/bin/bash
+# Script:
+#   bin/setup
+# Purpose:
+#   Install plugins
+#   symlink ~/.vimrc to ~/.vim/vimrc_<os>
+# Example
+#   bin/setup mac
+
+
+OS="$1"
+
+if [ -z "$OS" ]; then echo "OS value is required" && exit 1; fi
+
+ROOT_PATH="$(cd "$(dirname "$0")/.."; pwd)"
+HOME_DIR=${ROOT_PATH%/*}
+
+case "$OS" in
+mac)
+  cd $ROOT_PATH && vim +PluginInstall +qall
+  echo 'Plugins were updated'
+
+  ln -sf "$ROOT_PATH/vimrc_mac" "$HOME_DIR/.vimrc"
+  echo "$HOME_DIR/.vimrc -> $ROOT_PATH/vimrc_mac"
+
+  echo 'Done!'
+;;
+
+*)
+  # unknown option
+;;
+esac
