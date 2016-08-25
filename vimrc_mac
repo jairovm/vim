@@ -19,6 +19,7 @@ Plugin 'ervandew/supertab'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'ngmy/vim-rubocop'
 
 
 " All of your Plugins must be added before the following line
