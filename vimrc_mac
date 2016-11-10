@@ -69,7 +69,7 @@ set virtualedit=all
 set encoding=utf-8
 set showmatch                                          " Show matching brackets.
 
-set guifont=Menlo\ Regular:h12                         " Default font-size to 12px
+set guifont=Menlo\ Regular:h14                         " Default font-size to 14px
 
 " Visual
 set mat=5                                              " Bracket blinking.
