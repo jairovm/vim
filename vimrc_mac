@@ -95,7 +95,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 
 if has("gui_running")
   set guioptions-=T
-  set transparency=13
+  set transparency=0
 endif
 
 " Make the current window big, but leave others context
