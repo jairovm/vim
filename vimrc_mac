@@ -160,8 +160,8 @@ vmap <silent> <F5> :call NERDComment(1, "toggle")<CR>
 nmap <silent> <F5> v :call NERDComment(1, "toggle")<CR>
 imap <silent> <F5> <esc>v :call NERDComment(1, "toggle")<CR>
 
-nmap <silent> <F8> :FufRenewCache<CR>:FufFile **/<CR>
-imap <silent> <F8> <esc>:FufRenewCache<CR>:FufFile **/<CR>
+nmap <silent> <Space> zo<CR>
+nmap <silent> <BS> za<CR>
 
 vmap <silent> <F6> :tabnew<CR>
 nmap <silent> <F6> :vsp<CR>
