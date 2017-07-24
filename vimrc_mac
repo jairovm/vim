@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
+Plugin 'pseewald/vim-anyfold'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
@@ -92,6 +93,10 @@ set directory=~/.vim/tmp                               " Where temporary files w
 set visualbell
 set t_vb=
 set tm=500
+
+" vim-anyfold
+let anyfold_activate=1
+set foldlevel=1
 
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
