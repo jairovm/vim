@@ -17,7 +17,7 @@ HOME_DIR=${ROOT_PATH%/*}
 
 case "$OS" in
 mac)
-  cd $ROOT_PATH && vim +PluginInstall +qall
+  cd $ROOT_PATH && vim +PluginInstall +PluginClean\! +qall
   echo 'Plugins were updated'
 
   ln -sf "$ROOT_PATH/vimrc_mac" "$HOME_DIR/.vimrc"
