@@ -32,6 +32,9 @@ filetype plugin indent on    " required
 
 let g:vimrubocop_config = '~/.vim/config/rubocop.yml'
 
+" Folding
+set foldmethod=indent
+set foldlevel=1
 
 " Custom config
 syntax on
