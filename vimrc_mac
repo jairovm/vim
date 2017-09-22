@@ -46,8 +46,27 @@ set hls is
 set nowrap                                            " Line wrapping off
 set timeoutlen=250                                    " Time to wait after ESC (default causes an annoying delay)
 
-" Strip trailing white spaces
+" Strip trailing white spaces before file is saved
 autocmd BufWritePre *.md,*.js,*.rb,*.html,*.haml,*.erb,*.css,*.sass,*.coffee,*.yml call StripTrailingWhiteSpaces()
+function! StripTrailingWhiteSpaces()
+  " Store the current position
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Strip white spaces
+  %s/\s\+$//e
+  " Restore previous search history and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+" Disables Automatic Newline At End Of File
+autocmd BufRead,BufNewFile * call RemovesNewlineAtEndOfFile()
+function! RemovesNewlineAtEndOfFile()
+  set binary
+  set noeol
+endfunction
+
 
 " Color
 set t_Co=256
@@ -110,19 +129,6 @@ endif
 set winheight=10
 set winminheight=10
 set winheight=999
-
-" Strip trailing white spaces before file is saved
-function! StripTrailingWhiteSpaces()
-  " Store the current position
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Strip white spaces
-  %s/\s\+$//e
-  " Restore previous search history and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
 
 " 80 character limit
 if exists('+colorcolumn')
@@ -196,5 +202,4 @@ nnoremap <silent> <c-d> Yp
 
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
-
 
