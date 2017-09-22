@@ -61,8 +61,8 @@ function! StripTrailingWhiteSpaces()
 endfunction
 
 " Disables Automatic Newline At End Of File
-autocmd BufRead,BufNewFile * call RemovesNewlineAtEndOfFile()
-function! RemovesNewlineAtEndOfFile()
+autocmd BufRead,BufNewFile * if expand('%:e') == '' | call SetBinaryAndNoeolVariables() | endif
+function! SetBinaryAndNoeolVariables()
   set binary
   set noeol
 endfunction
@@ -202,4 +202,3 @@ nnoremap <silent> <c-d> Yp
 
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
-
