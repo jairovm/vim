@@ -61,7 +61,6 @@ function! StripTrailingWhiteSpaces()
 endfunction
 
 " Disables Automatic Newline At End Of File
-autocmd BufRead,BufNewFile * if expand('%:e') == '' | call SetBinaryAndNoeolVariables() | endif
 function! SetBinaryAndNoeolVariables()
   set binary
   set noeol
@@ -170,6 +169,10 @@ nmap <silent> <BS> za<CR>
 vmap <silent> <F6> :tabnew<CR>
 nmap <silent> <F6> :vsp<CR>
 imap <silent> <F6> <ESC>:sp<CR>i
+
+vmap <silent> <F8> v :call SetBinaryAndNoeolVariables()<CR>
+nmap <silent> <F8> :call SetBinaryAndNoeolVariables()<CR>
+imap <silent> <F8> <ESC>:call SetBinaryAndNoeolVariables()<CR>i
 
 nnoremap <c-j> :m+<CR>==
 nnoremap <c-k> :m-2<CR>==
