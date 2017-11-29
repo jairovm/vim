@@ -114,7 +114,10 @@ set visualbell
 set t_vb=
 set tm=500
 
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight LineNr       term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight Folded                                             ctermbg=NONE                         guibg=NONE
+"highlight StatusLine                        ctermfg=Black ctermbg=White            guifg=Black    guifg=White
+"highlight StatusLineNC                      ctermfg=Black ctermbg=White            guifg=Black    guifg=White
 
 if has("gui_running")
   set guioptions-=T
