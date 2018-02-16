@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'mileszs/ack.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -186,12 +187,6 @@ vnoremap <c-k> :m-2<CR>gv=gv
 
 " recording macro
 nmap <C-A> @r
-
-map <silent> <c-f> :FufFile **/<CR>
-map <silent> <c-b> :FufBuffer **/<CR>
-
-imap <silent> <c-f> <esc>:FufFile **/<CR>
-imap <silent> <c-b> <esc>:FufBuffer **/<CR>
 
 set pastetoggle=<F7>  " Toggle auto-indenting for code paste
 
