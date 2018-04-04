@@ -31,7 +31,7 @@ Plugin 'Matt-Deacalion/vim-systemd-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-let g:vimrubocop_config = '~/.vim/config/rubocop.yml'
+"let g:vimrubocop_config = '~/.vim/config/rubocop.yml'
 
 " Folding
 set foldmethod=indent
