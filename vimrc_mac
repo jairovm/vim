@@ -98,6 +98,7 @@ set guifont=Menlo\ Regular:h14                         " Default font-size to 14
 " Visual
 set mat=5                                              " Bracket blinking.
 " set list                                             " Show $ at end of line and trailing space as ~
+set list lcs=tab:->                                    " Show tabs as ->
 "set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
 "set laststatus=2                                       " Always show status line.
 
