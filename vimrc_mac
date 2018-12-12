@@ -26,6 +26,7 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'slim-template/vim-slim'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plugin 'hashivim/vim-terraform'
 
 
 " All of your Plugins must be added before the following line
