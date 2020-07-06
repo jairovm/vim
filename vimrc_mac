@@ -37,7 +37,7 @@ filetype plugin indent on    " required
 
 " Folding
 set foldmethod=indent
-set foldlevel=1
+set foldlevel=10
 
 " Custom config
 syntax on
@@ -95,7 +95,7 @@ set virtualedit=all
 set encoding=utf-8
 set showmatch                                          " Show matching brackets.
 
-set guifont=Menlo\ Regular:h14                         " Default font-size to 14px
+set guifont=Menlo\ Regular:h18                         " Default font-size to 14px
 
 " Visual
 set mat=5                                              " Bracket blinking.
@@ -109,9 +109,19 @@ set list lcs=tab:->                                    " Show tabs as ->
 set mouse=a                                            " Mouse in all modes
 
 " Backups & Files
-set backup                                             " Enable creation of backup file.
-set backupdir=~/.vim/backup                            " Where backups will go.
-set directory=~/.vim/tmp                               " Where temporary files will go.
+"set backup                                             " Enable creation of backup file.
+"set backupdir=~/.vim/backup                            " Where backups will go.
+"set directory=~/.vim/tmp                               " Where temporary files will go.
+
+set nobackup                    " no backup files
+set nowritebackup               " only in case you don't want a backup file while editing
+set noswapfile                  " no swap files
+
+set autowrite                   " Automatically save before :next, :make etc.
+set autoread                    " Automatically reread changed files without asking me anything
+
+"set ruler                       " Show the cursor position all the time
+au FocusLost * silent! wa       " Set vim to save the file on focus out.
 
 " No sound on errors
 set visualbell
