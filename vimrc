@@ -102,6 +102,11 @@ au BufRead,BufNewFile *.scss setf sass
 au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 
+" Wildmenu completion {{{
+set wildmenu
+" set wildmode=list:longest
+set wildmode=list:full
+
 set wildignore+=.hg,.git,.svn                    " Version control
 set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
 set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
