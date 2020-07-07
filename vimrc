@@ -73,3 +73,8 @@ set showmatch                                          " Show matching brackets.
 set notimeout
 set ttimeout
 set ttimeoutlen=10
+
+set mouse=a
+if !has('nvim')
+  set ttymouse=xterm2
+endif
