@@ -78,3 +78,9 @@ set mouse=a
 if !has('nvim')
   set ttymouse=xterm2
 endif
+
+" ruby standard 2 spaces, always
+au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
+au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set softtabstop=2
+au BufRead,BufNewFile *.haml setf haml
+au BufRead,BufNewFile *.scss setf sass
