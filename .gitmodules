@@ -4,3 +4,6 @@
 [submodule "bundle/gruvbox"]
 	path = bundle/gruvbox
 	url = https://github.com/gruvbox-community/gruvbox.git
+[submodule "bundle/gruvbox-material"]
+	path = bundle/gruvbox-material
+	url = https://github.com/sainnhe/gruvbox-material.git
