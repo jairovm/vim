@@ -90,6 +90,9 @@ if !has('nvim')
   set ttymouse=xterm2
 endif
 
+" dont save .netrwhist history
+let g:netrw_dirhistmax=0
+
 " File Type settings
 " -----------------------------------------
 au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
