@@ -58,22 +58,32 @@ set formatoptions=qrn1
 " Do not use relative numbers to where the cursor is.
 set norelativenumber
 
-set ts=2                                              " Tabs are 2 spaces
-set bs=2                                              " Backspace over everything in insert mode
+set ts=2                        " Tabs are 2 spaces
+set bs=2                        " Backspace over everything in insert mode
 set softtabstop=2
-set shiftwidth=2                                      " Tabs under smart indent
+set shiftwidth=2                " Tabs under smart indent
 set autoindent
 set smarttab
 set expandtab
 set smartindent
 set virtualedit=all
-set showmatch                                          " Show matching brackets.
+set showmatch                   " Show matching brackets.
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
 set notimeout
 set ttimeout
 set ttimeoutlen=10
+
+au FocusLost * silent! wa       " Set vim to save the file on focus out.
+
+" 80 character limit
+if exists('+colorcolumn')
+  hi ColorColumn guibg=#2d2d2d ctermbg=246
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 
 set mouse=a
 if !has('nvim')
@@ -104,3 +114,9 @@ let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
 " ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+" ==================== Fugitive ====================
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+vnoremap <leader>gb :Gblame<CR>
