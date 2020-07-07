@@ -7,3 +7,6 @@
 [submodule "bundle/gruvbox-material"]
 	path = bundle/gruvbox-material
 	url = https://github.com/sainnhe/gruvbox-material.git
+[submodule "bundle/vim-polyglot"]
+	path = bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
