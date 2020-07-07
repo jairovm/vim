@@ -90,15 +90,17 @@ if !has('nvim')
   set ttymouse=xterm2
 endif
 
-" ruby standard 2 spaces, always
+" File Type settings
+" -----------------------------------------
 au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
 au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set softtabstop=2
 au BufRead,BufNewFile *.haml setf haml
 au BufRead,BufNewFile *.scss setf sass
+au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 
-" ----------------------------------------- "
-" Plugin configs 			    			"
-" ----------------------------------------- "
+" Plugin configs
+" -----------------------------------------
 
 " ==================== CtrlP ====================
 let g:ctrlp_cmd = 'CtrlP'
