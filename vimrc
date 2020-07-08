@@ -102,6 +102,9 @@ nnoremap <leader>a :cclose<CR>
 " Remove search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Terminal
+nnoremap <leader>t :terminal<CR>i
+
 " File Type settings
 " -----------------------------------------
 au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
