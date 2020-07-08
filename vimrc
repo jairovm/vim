@@ -102,6 +102,43 @@ nnoremap <leader>a :cclose<CR>
 " Remove search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Buffer prev/next
+nnoremap <C-x> :bnext<CR>
+nnoremap <C-z> :bprev<CR>
+
+" Better split switching
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Center the screen
+nnoremap <space> zz
+
+" Move up and down on splitted lines (on small width screens)
+map <Up> gk
+map <Down> gj
+map k gk
+map j gj
+
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Do not show stupid q: window
+map q: :q
+
+" Sometimes this happens and I hate it
+map :Vs :vs
+map :Sp :sp
+
+" trim all whitespaces away
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
 " Terminal
 nnoremap <leader>t :terminal<CR>i
 
