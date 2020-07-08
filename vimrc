@@ -75,6 +75,10 @@ set notimeout
 set ttimeout
 set ttimeoutlen=10
 
+" Folding
+set foldmethod=indent
+set foldlevel=10
+
 au FocusLost * silent! wa       " Set vim to save the file on focus out.
 
 " 80 character limit
@@ -131,10 +135,6 @@ nnoremap N Nzzzv
 
 " Do not show stupid q: window
 map q: :q
-
-" Sometimes this happens and I hate it
-map :Vs :vs
-map :Sp :sp
 
 " trim all whitespaces away
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
