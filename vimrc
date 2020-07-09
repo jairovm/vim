@@ -119,6 +119,9 @@ map <C-l> <C-W>l
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Fast closing
+nnoremap <silent> <leader>q :Sayonara<CR>
+
 " Center the screen
 nnoremap <space> zz
 
