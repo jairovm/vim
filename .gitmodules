@@ -38,3 +38,6 @@
 [submodule "bundle/vim-sayonara"]
 	path = bundle/vim-sayonara
 	url = https://github.com/mhinz/vim-sayonara.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
