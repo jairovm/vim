@@ -195,6 +195,12 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gp :Gpush<CR>
 vnoremap <leader>gb :Gblame<CR>
 
+" ========= vim-better-whitespace ==================
+
+" auto strip whitespace except for file with extention blacklisted
+let blacklist = ['diff', 'gitcommit', 'unite', 'qf', 'help', 'markdown']
+autocmd BufWritePre * if index(blacklist, &ft) < 0 | StripWhitespace
+
  " =================== coc.nvim ========================
 
 " Give more space for displaying messages.
