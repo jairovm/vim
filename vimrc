@@ -145,6 +145,11 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Terminal
 nnoremap <leader>t :terminal<CR>i
 
+" CocSearch
+nnoremap <leader>cs<Space> :CocSearch -s -H --column --context 0 ''<Left>
+" nnoremap <leader>csw :CocSearch -s -H --column --context 0 ''<Left><C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>csw :CocSearch -s -H --column --context 0 <C-R>=expand("<cword>")<CR><CR>
+
 " File Type settings
 " -----------------------------------------
 au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
