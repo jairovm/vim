@@ -41,3 +41,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/split-term.vim"]
+	path = bundle/split-term.vim
+	url = https://github.com/vimlab/split-term.vim.git
