@@ -122,6 +122,10 @@ nmap <leader>w :w!<cr>
 " Fast closing
 nnoremap <silent> <leader>q :Sayonara<CR>
 
+" Copy & Paste
+vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+
 " Center the screen
 nnoremap <space> zz
 
