@@ -147,7 +147,17 @@ map q: :q
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Terminal
-nnoremap <leader>t :terminal<CR>i
+if has('nvim')
+  nnoremap <leader>t :10Term<CR>
+  tnoremap <leader><Esc> <C-\><C-n>:Sayonara<CR>
+endif
+
+if !has('nvim')
+  " Allow hitting <Esc> to switch to normal mode
+  tnoremap <Esc> <C-\><C-n>
+  nnoremap <leader>t :terminal<CR>
+  tnoremap <silent> <leader><Esc> <C-\><C-n>:bdelete!<CR>
+endif
 
 " CocSearch
 nnoremap <leader>cs<Space> :CocSearch -s -H --column --context 0 ''<Left>
