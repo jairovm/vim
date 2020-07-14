@@ -44,7 +44,7 @@ set ignorecase                  " Search case insensitive...
 set smartcase                   " ... but not when search pattern contains upper case characters
 set ttyfast
 " set ttyscroll=3               " noop on linux ?
-set lazyredraw          	      " Wait to redraw "
+set lazyredraw                  " Wait to redraw "
 
 " speed up syntax highlighting
 set nocursorcolumn
@@ -87,6 +87,11 @@ if exists('+colorcolumn')
   set colorcolumn=80
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
+" Disables number lines on terminal buffers
+if has('nvim')
+  autocmd TermOpen * :setlocal nonumber norelativenumber signcolumn=no
 endif
 
 set mouse=a
