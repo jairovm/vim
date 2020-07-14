@@ -79,6 +79,14 @@ set ttimeoutlen=10
 set foldmethod=indent
 set foldlevel=10
 
+" Make the current window big, but leave others context
+" We have to have a winheight bigger than we want to set winminheight.
+" But if we set winheight to be huge before winminheight, the winminheight set
+" will fail.
+set winheight=10
+set winminheight=10
+set winheight=999
+
 au FocusLost * silent! wa       " Set vim to save the file on focus out.
 
 " 80 character limit
@@ -153,7 +161,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Terminal
 if has('nvim')
-  nnoremap <silent> <leader>t :update<CR>:10Term<CR>
+  nnoremap <silent> <leader>t :update<CR>:Term<CR>
   tnoremap <silent> <leader><Esc> <C-\><C-n>:Sayonara<CR>
 endif
 
