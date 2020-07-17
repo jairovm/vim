@@ -77,7 +77,7 @@ set ttimeoutlen=10
 
 " Folding
 set foldmethod=indent
-set foldlevel=10
+set foldlevel=100
 
 " Make the current window big, but leave others context
 " We have to have a winheight bigger than we want to set winminheight.
