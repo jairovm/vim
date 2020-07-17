@@ -133,7 +133,7 @@ map <C-l> <C-W>l
 nmap <leader>w :w!<cr>
 
 " Fast closing
-nnoremap <silent> <leader>q :Sayonara<CR>
+nnoremap <silent> <leader><Esc> :Sayonara<CR>
 
 " Copy & Paste
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
