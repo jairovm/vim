@@ -44,3 +44,6 @@
 [submodule "bundle/split-term.vim"]
 	path = bundle/split-term.vim
 	url = https://github.com/vimlab/split-term.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git
