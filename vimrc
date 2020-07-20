@@ -123,12 +123,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>z :bprev<CR>
 nnoremap <leader>x :bnext<CR>
 
-" Better split switching
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 " Fast saving
 nmap <leader>w :w!<cr>
 
