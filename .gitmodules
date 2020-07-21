@@ -53,3 +53,6 @@
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/vim-tmux-focus-events"]
+	path = bundle/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
