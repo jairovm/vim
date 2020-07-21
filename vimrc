@@ -112,6 +112,12 @@ endif
 " dont save .netrwhist history
 let g:netrw_dirhistmax=0
 
+" This comes first, because we have mappings that depend on leader
+" With a map leader it's possible to do extra key combinations
+" i.e: <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
 " Mappings
 " -----------------------------------------
 
