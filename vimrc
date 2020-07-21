@@ -319,8 +319,7 @@ let g:coc_global_extensions = ['coc-solargraph']
 "==================== NerdTree ====================
 " For toggling
 nmap <C-n> :NERDTreeToggle<CR>
-noremap <Leader>n :NERDTreeToggle<cr>
-noremap <Leader>f :NERDTreeFind<cr>
+noremap <C-f> :NERDTreeFind<cr>
 
 let NERDTreeShowHidden=1
 
