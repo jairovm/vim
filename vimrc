@@ -128,8 +128,8 @@ nnoremap <leader>a :cclose<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Buffer prev/next
-nnoremap <leader>z :bprev<CR>
-nnoremap <leader>x :bnext<CR>
+nnoremap <C-z> :bprev<CR>
+nnoremap <C-x> :bnext<CR>
 
 " Fast saving
 nmap <leader>w :w!<cr>
