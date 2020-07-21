@@ -168,11 +168,6 @@ if !has('nvim')
   tnoremap <silent> <leader><Esc> <C-\><C-n>:bdelete!<CR>
 endif
 
-" CocSearch
-nnoremap <leader>cs<Space> :CocSearch -s -H --column --context 0 ''<Left>
-" nnoremap <leader>csw :CocSearch -s -H --column --context 0 ''<Left><C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>csw :CocSearch -s -H --column --context 0 <C-R>=expand("<cword>")<CR><CR>
-
 " File Type settings
 " -----------------------------------------
 au BufRead,BufNewFile *.rb,*.rhtml,*.erb,*.haml,*.js set shiftwidth=2
@@ -295,8 +290,13 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format-selected)
+
+" CocSearch
+nnoremap <leader>cs<Space> :CocSearch -s -H --column --context 0 ''<Left>
+" nnoremap <leader>csw :CocSearch -s -H --column --context 0 ''<Left><C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>csw :CocSearch -s -H --column --context 0 <C-R>=expand("<cword>")<CR><CR>
 
 let g:coc_global_extensions = ['coc-solargraph']
 
