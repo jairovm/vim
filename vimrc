@@ -10,7 +10,9 @@ filetype off                  " required
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
 
-set termguicolors
+if has("termguicolors")
+  set termguicolors
+endif
 
 colorscheme gruvbox
 set background=dark
