@@ -328,3 +328,7 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store']
 " Close nerdtree and vim on close file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd FileType nerdtree set signcolumn=no
+
+" =================== vim-tmux-navigator ========================
+" Write all buffers before navigating from Vim to tmux pane
+let g:tmux_navigator_save_on_switch = 2
