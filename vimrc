@@ -116,6 +116,7 @@ let g:netrw_dirhistmax=0
 " -----------------------------------------
 
 " Maps space to default leader
+xmap <space> \
 nmap <space> \
 
 " Close quickfix easily
