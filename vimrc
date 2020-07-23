@@ -329,3 +329,5 @@ let g:tmux_navigator_save_on_switch = 2
 
 " =================== fzf ========================
 set rtp+=/usr/local/opt/fzf
+nnoremap <silent> <C-p> :Files<CR>
+inoremap <silent> <C-p> <Esc>:Files<CR>
