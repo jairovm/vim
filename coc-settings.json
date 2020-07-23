@@ -1,0 +1,8 @@
+{
+  "codeLens.enable": true,
+  "solargraph.formatting": true,
+  "solargraph.references": true,
+  "solargraph.definitions": true,
+  "solargraph.rename": true,
+  "solargraph.folding": true
+}
