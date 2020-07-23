@@ -158,14 +158,14 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Terminal
 if has('nvim')
-  nnoremap <silent> <leader>t :update<CR>:Term<CR>
+  nnoremap <silent> <leader>t :wa<CR>:Term<CR>
   tnoremap <silent> <leader><Esc> <C-\><C-n>:Sayonara<CR>
 endif
 
 if !has('nvim')
   " Allow hitting <Esc> to switch to normal mode
   tnoremap <Esc> <C-\><C-n>
-  nnoremap <silent> <leader>t :update<CR>:terminal<CR>
+  nnoremap <silent> <leader>t :wa<CR>:terminal<CR>
   tnoremap <silent> <leader><Esc> <C-\><C-n>:bdelete!<CR>
 endif
 
