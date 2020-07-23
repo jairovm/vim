@@ -308,7 +308,7 @@ let g:coc_global_extensions = ['coc-solargraph']
 "       \'win'  : ['#I', '#W'],
 "       \'cwin' : ['#I', '#W'],
 "       \'y'    : ['%Y-%m-%d', '%H:%M'],
-"       \'z'    : '#H | #(pmset -g batt | tail -n1 | cut -f2 | cut -d";" -f1)'}
+"       \'z'    : '#(pmset -g batt | tail -n1 | cut -f2 | cut -d";" -f1)'}
 
 "==================== NerdTree ====================
 " For toggling
