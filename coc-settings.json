@@ -5,5 +5,6 @@
   "solargraph.definitions": true,
   "solargraph.rename": true,
   "solargraph.folding": true,
-  "solargraph.symbols": true
+  "solargraph.symbols": true,
+  "solargraph.diagnostics": true
 }
