@@ -81,13 +81,10 @@ set ttimeoutlen=10
 set foldmethod=indent
 set foldlevel=100
 
-" Make the current window big, but leave others context
-" We have to have a winheight bigger than we want to set winminheight.
-" But if we set winheight to be huge before winminheight, the winminheight set
-" will fail.
-set winheight=10
-set winminheight=10
-set winheight=999
+" Make the current window big
+" set winheight=5
+" set winminheight=5
+" autocmd WinEnter * wincmd _
 
 au FocusLost * silent! wa       " Set vim to save the file on focus out.
 
