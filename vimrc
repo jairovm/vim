@@ -153,6 +153,9 @@ map q: :q
 " trim all whitespaces away
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Show help for current word
+nnoremap <leader>hw :h <C-R>=expand("<cword>")<CR><CR>
+
 " Terminal
 if has('nvim')
   nnoremap <silent> <leader>t :wa<CR>:Term<CR>
@@ -294,9 +297,7 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 " CocSearch
-" nnoremap <leader>cs<Space> :CocSearch -s -H --column --context 0 ''<Left>
-" nnoremap <leader>csw :CocSearch -s -H --column --context 0 ''<Left><C-R>=expand("<cword>")<CR><CR>
-" nnoremap <leader>csw :CocSearch -s -H --column --context 0 <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 let g:coc_global_extensions = ['coc-solargraph']
 
@@ -336,3 +337,4 @@ let $FZF_DEFAULT_OPTS='--reverse'
 nnoremap <silent> <C-p> :GFiles<CR>
 inoremap <silent> <C-p> <Esc>:GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
+nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
