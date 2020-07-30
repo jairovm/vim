@@ -329,5 +329,10 @@ let g:tmux_navigator_save_on_switch = 2
 
 " =================== fzf ========================
 set rtp+=/usr/local/opt/fzf
-nnoremap <silent> <C-p> :Files<CR>
-inoremap <silent> <C-p> <Esc>:Files<CR>
+
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+
+nnoremap <silent> <C-p> :GFiles<CR>
+inoremap <silent> <C-p> <Esc>:GFiles<CR>
+nnoremap <Leader>pf :Files<CR>
