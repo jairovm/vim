@@ -1,5 +1,4 @@
 {
-  "codeLens.enable": true,
   "solargraph.formatting": true,
   "solargraph.references": true,
   "solargraph.definitions": true,
