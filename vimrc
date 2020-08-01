@@ -296,7 +296,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " CocSearch
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
-let g:coc_global_extensions = ['coc-solargraph']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-snippets', 'coc-json']
 
 " =================== tmuxline.nvim ========================
 " git clone https://github.com/edkolev/tmuxline.vim.git bundle/tmuxline.vim
