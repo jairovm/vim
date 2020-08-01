@@ -1,4 +1,9 @@
 {
+  "diagnostic.hintSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+
   "solargraph.formatting": true,
   "solargraph.references": true,
   "solargraph.definitions": true,

@@ -39,6 +39,7 @@ set autoread                    " Automatically reread changed files without ask
 set laststatus=2
 set hidden
 
+set signcolumn=no               " Disables sign column
 set noshowmode                  " We show the mode with airline or lightline
 set incsearch                   " Shows the match while typing
 set hlsearch                    " Highlight found searches
@@ -242,10 +243,6 @@ set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-set signcolumn=yes
-
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -322,7 +319,6 @@ let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store']
 
 " Close nerdtree and vim on close file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd FileType nerdtree set signcolumn=no
 
 " =================== vim-tmux-navigator ========================
 " Write all buffers before navigating from Vim to tmux pane
