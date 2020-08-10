@@ -151,6 +151,9 @@ nnoremap <leader>a :cclose<CR>
 " Remove search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+" List all buffers
+nnoremap <leader>ls :ls<CR>
+
 " Buffer prev/next
 nnoremap <C-z> :bprev<CR>
 nnoremap <C-x> :bnext<CR>
