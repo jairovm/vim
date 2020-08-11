@@ -138,6 +138,19 @@ endfunction
 
 command! Ball :call DeleteInactiveBufs()
 
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+" Also don't do it when the mark is in the first line, that is the default
+" position when opening a file.
+function! JumpToLastKnownCursorPosition()
+  if line("'\"") > 1 && line("'\"") <= line("$")
+    exe "normal! g`\""
+  endif
+endfunction
+
+autocmd BufReadPost * silent call JumpToLastKnownCursorPosition()
+
 " Mappings
 " -----------------------------------------
 
@@ -155,14 +168,14 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>ls :ls<CR>
 
 " Buffer prev/next
-nnoremap <C-z> :bprev<CR>
-nnoremap <C-x> :bnext<CR>
+nnoremap <silent> <C-z> :bprev <bar> :call JumpToLastKnownCursorPosition()<CR>
+nnoremap <silent> <C-x> :bnext <bar> :call JumpToLastKnownCursorPosition()<CR>
 
 " Fast saving
 nmap <leader>w :w!<cr>
 
 " Fast closing
-nnoremap <silent> <leader>q :Sayonara<CR>
+nnoremap <silent> <leader>q :Sayonara <bar> :call JumpToLastKnownCursorPosition()<CR>
 nnoremap <silent> <leader>da :Ball<CR>
 
 " Copy & Paste
