@@ -379,3 +379,6 @@ nnoremap <silent> <C-p> :GFiles<CR>
 inoremap <silent> <C-p> <Esc>:GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+
+" =================== vim-airline ========================
+let g:airline_powerline_fonts = 1
