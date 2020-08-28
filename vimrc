@@ -154,9 +154,11 @@ autocmd BufReadPost * silent call JumpToLastKnownCursorPosition()
 " Mappings
 " -----------------------------------------
 
-" Maps space to default leader
-xmap <space> \
-nmap <space> \
+" This comes first, because we have mappings that depend on leader
+" With a map leader it's possible to do extra key combinations
+" i.e: <leader>w saves the current file
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 " Close quickfix easily
 nnoremap <leader>a :cclose<CR>
