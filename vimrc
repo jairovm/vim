@@ -342,7 +342,7 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
 " CocSearch
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 let g:coc_global_extensions = ['coc-solargraph', 'coc-json']
 
@@ -385,8 +385,7 @@ nnoremap <Leader>pf :Files<CR>
 
 " Rg (Search)
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <C-S-f> :Rg<SPACE>
-inoremap <C-S-f> <Esc>:Rg<SPACE>
+nnoremap <leader>pr :Rg<SPACE>
 
 " =================== vim-airline ========================
 let g:airline_powerline_fonts = 1
