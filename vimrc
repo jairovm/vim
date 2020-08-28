@@ -164,7 +164,7 @@ let g:mapleader = "\<Space>"
 nnoremap <leader>a :cclose<CR>
 
 " Remove search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader><space> :noh<CR>
 
 " List all buffers
 nnoremap <leader>ls :ls<CR>
@@ -182,6 +182,7 @@ nnoremap <silent> <leader>da :Ball<CR>
 
 " Copy & Paste
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
+vmap <C-x> d:call system("pbcopy", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Move up and down on splitted lines (on small width screens)
@@ -379,8 +380,14 @@ let $FZF_DEFAULT_OPTS='--reverse'
 
 nnoremap <silent> <C-p> :GFiles<CR>
 inoremap <silent> <C-p> <Esc>:GFiles<CR>
+
 nnoremap <Leader>pf :Files<CR>
+
+" Rg (Search)
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap <C-S-f> :Rg<SPACE>
+inoremap <C-S-f> <Esc>:Rg<SPACE>
 
 " =================== vim-airline ========================
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#displayed_head_limit = 10
