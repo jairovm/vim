@@ -185,6 +185,12 @@ vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 vmap <C-x> d:call system("pbcopy", getreg("\""))<CR>
 nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
+" Copy current file path
+nmap <silent> <leader>cf :let @+ = expand("%")<CR> :echo "Copied!"<CR>
+
+" Copy current directory path
+nmap <silent> <leader>cd :let @+ = expand("%:h")<CR> :echo "Copied!"<CR>
+
 " Move up and down on splitted lines (on small width screens)
 map <Up> gk
 map <Down> gj
