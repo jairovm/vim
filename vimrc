@@ -350,7 +350,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " CocSearch
 " nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
-let g:coc_global_extensions = ['coc-solargraph', 'coc-json']
+let g:coc_global_extensions = ['coc-solargraph', 'coc-json', 'coc-explorer']
 
 " =================== tmuxline.nvim ========================
 " git clone https://github.com/edkolev/tmuxline.vim.git bundle/tmuxline.vim
@@ -364,8 +364,8 @@ let g:coc_global_extensions = ['coc-solargraph', 'coc-json']
 
 "==================== NerdTree ====================
 " For toggling
-nmap <C-n> :NERDTreeToggle<CR>
-noremap <C-f> :NERDTreeFind<cr>
+" nmap <C-n> :NERDTreeToggle<CR>
+" noremap <C-f> :NERDTreeFind<cr>
 
 let NERDTreeShowHidden=1
 
@@ -396,3 +396,7 @@ nnoremap <leader>pr :Rg<SPACE>
 " =================== vim-airline ========================
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#displayed_head_limit = 10
+
+" =================== coc-explorer ========================
+nmap <silent> <c-n> :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
