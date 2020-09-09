@@ -362,18 +362,6 @@ let g:coc_global_extensions = ['coc-solargraph', 'coc-json', 'coc-explorer']
 "       \'y'    : ['%Y-%m-%d', '%H:%M'],
 "       \'z'    : '#(pmset -g batt | tail -n1 | cut -f2 | cut -d";" -f1)'}
 
-"==================== NerdTree ====================
-" For toggling
-" nmap <C-n> :NERDTreeToggle<CR>
-" noremap <C-f> :NERDTreeFind<cr>
-
-let NERDTreeShowHidden=1
-
-let NERDTreeIgnore=['\.vim$', '\~$', '\.git$', '.DS_Store']
-
-" Close nerdtree and vim on close file
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " =================== vim-tmux-navigator ========================
 " Write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
