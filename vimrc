@@ -379,7 +379,7 @@ nnoremap <Leader>pf :Files<CR>
 
 " Rg (Search)
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>pr :Rg<SPACE>
+nnoremap <c-f> :Rg<SPACE>
 
 " =================== vim-airline ========================
 let g:airline_powerline_fonts = 1
