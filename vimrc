@@ -182,6 +182,7 @@ nnoremap <silent> <leader>da :Ball<CR>
 
 " Copy & Paste
 vmap <silent> <C-c> y:call system("pbcopy", getreg("\""))<CR>
+nmap <silent> <C-c> :.w !pbcopy<CR><CR> :echo "Copied!"<CR>
 vmap <silent> <C-x> d:call system("pbcopy", getreg("\""))<CR>
 nmap <silent> <C-v> :set paste<CR> :r !pbpaste<CR>:set nopaste<CR>
 imap <C-v> <Esc> :call setreg("\"",system("pbpaste"))<CR>pO
