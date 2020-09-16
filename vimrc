@@ -181,9 +181,10 @@ nnoremap <silent> <leader>q :Sayonara <bar> :call JumpToLastKnownCursorPosition(
 nnoremap <silent> <leader>da :Ball<CR>
 
 " Copy & Paste
-vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-vmap <C-x> d:call system("pbcopy", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+vmap <silent> <C-c> y:call system("pbcopy", getreg("\""))<CR>
+vmap <silent> <C-x> d:call system("pbcopy", getreg("\""))<CR>
+nmap <silent> <C-v> :set paste<CR> :r !pbpaste<CR>:set nopaste<CR>
+imap <C-v> <Esc> :call setreg("\"",system("pbpaste"))<CR>pO
 
 " Copy current file path
 nmap <silent> <leader>cf :let @+ = expand("%")<CR> :echo "Copied!"<CR>
