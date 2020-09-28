@@ -374,10 +374,10 @@ set rtp+=/usr/local/opt/fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 
-nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <silent> <C-p> :Files<CR>
 inoremap <silent> <C-p> <Esc>:GFiles<CR>
 
-nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>pg :GFiles<CR>
 
 " Rg (Search)
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
