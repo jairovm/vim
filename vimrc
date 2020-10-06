@@ -192,6 +192,9 @@ nmap <silent> <leader>cf :let @+ = expand("%")<CR> :echo "Copied!"<CR>
 
 " Copy current directory path
 nmap <silent> <leader>cd :let @+ = expand("%:h")<CR> :echo "Copied!"<CR>
+"
+" Copy current git branch
+nmap <silent> <leader>cb :let @+ = system("git rev-parse --abbrev-ref HEAD")<CR> :echo "Copied!"<CR>
 
 " Move up and down on splitted lines (on small width screens)
 map <Up> gk
