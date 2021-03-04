@@ -10,7 +10,7 @@
       "expand": true
     }
   ],
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "h": "collapse",
     "j": "nodeNext",
     "k": "nodePrev",
