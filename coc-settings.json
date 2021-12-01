@@ -25,5 +25,6 @@
   "solargraph.rename": true,
   "solargraph.folding": true,
   "solargraph.symbols": true,
-  "solargraph.diagnostics": true
+  "solargraph.diagnostics": true,
+  "solargraph.transport": "stdio"
 }
