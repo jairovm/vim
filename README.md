@@ -14,16 +14,17 @@
 ## About
 
 ### Dependencies
-```console
+```bash
 brew install nvim fzf ripgrep
 gem install solargraph
 ```
 
 ### Installing
 
-```console
-git clone --recursive git@github.com:jairovm/vim.git ~/.vim
+```bash
+git clone --recurse-submodules git@github.com:jairovm/vim.git ~/.vim
 ln -nsf ~/.vim ~/.config/nvim
+ln -nsf ~/.vim/init.vim ~/.vimrc
 ```
 
 ### Resources
