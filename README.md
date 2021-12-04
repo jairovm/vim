@@ -22,7 +22,7 @@ gem install solargraph
 ### Installing
 
 ```bash
-git clone --recurse-submodules git@github.com:jairovm/vim.git ~/.vim
+git clone --recurse-submodules https://github.com/jairovm/vim.git ~/.vim
 ln -nsf ~/.vim ~/.config/nvim
 ln -nsf ~/.vim/init.vim ~/.vimrc
 ```
