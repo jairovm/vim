@@ -372,7 +372,7 @@ let g:coc_global_extensions = ['coc-solargraph', 'coc-json', 'coc-explorer']
 let g:tmux_navigator_save_on_switch = 2
 
 " =================== fzf ========================
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
