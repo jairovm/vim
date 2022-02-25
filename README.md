@@ -1,15 +1,11 @@
 # Vim
 
-**Table of Contents**
+## Table of Contents
 
-<!-- toc -->
-
-- [About](#about)
+* [About](#about)
   * [Dependencies](#dependencies)
   * [Installing](#installing)
-- [Resources](#resources)
-
-<!-- tocstop -->
+* [Resources](#resources)
 
 ## About
 
