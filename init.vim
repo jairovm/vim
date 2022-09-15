@@ -258,6 +258,10 @@ set wildignore+=go/bin-vagrant                   " Go bin-vagrant files
 set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 
+" Ruby
+noremap <silent> <leader>rx :!ruby %<CR>
+noremap <silent> <leader>rjp :%!ruby -rjson -e 'puts JSON.pretty_generate(JSON.load_file("%"))'<CR>
+
 " Plugin configs
 " -----------------------------------------
 
