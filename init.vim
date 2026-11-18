@@ -180,12 +180,19 @@ nmap <leader>w :w!<cr>
 nnoremap <silent> <leader>q :Sayonara <bar> :call JumpToLastKnownCursorPosition()<CR>
 nnoremap <silent> <leader>da :Ball<CR>
 
-" Copy & Paste
-vmap <silent> <C-c> y:call system("pbcopy", getreg("\""))<CR>
-nmap <silent> <C-c> :.w !pbcopy<CR><CR> :echo "Copied!"<CR>
-vmap <silent> <C-x> d:call system("pbcopy", getreg("\""))<CR>
-nmap <silent> <C-v> :set paste<CR> :r !pbpaste<CR>:set nopaste<CR>
-imap <C-v> <Esc> :call setreg("\"",system("pbpaste"))<CR>pO
+" Copy locally on macOS, or to the SSH client's terminal on Linux.
+if has('macunix') && executable('pbcopy') && executable('pbpaste')
+  vmap <silent> <C-c> y:call system("pbcopy", getreg("\""))<CR>
+  nmap <silent> <C-c> :.w !pbcopy<CR><CR> :echo "Copied!"<CR>
+  vmap <silent> <C-x> d:call system("pbcopy", getreg("\""))<CR>
+  nmap <silent> <C-v> :set paste<CR> :r !pbpaste<CR>:set nopaste<CR>
+  imap <C-v> <Esc> :call setreg("\"",system("pbpaste"))<CR>pO
+elseif has('nvim-0.10')
+  lua require('portable_clipboard').setup()
+  vnoremap <silent> <C-c> "+y
+  nnoremap <silent> <C-c> "+yy
+  vnoremap <silent> <C-x> "+d
+endif
 
 " Copy current file path
 nmap <silent> <leader>cf :let @+ = expand("%")<CR> :echo "Copied!"<CR>
@@ -379,7 +386,17 @@ let g:coc_global_extensions = ['coc-explorer', 'coc-eslint', 'coc-json', 'coc-so
 let g:tmux_navigator_save_on_switch = 2
 
 " =================== fzf ========================
-set rtp+=/opt/homebrew/opt/fzf
+if executable('fzf')
+  let s:fzf_executable = resolve(exepath('fzf'))
+  let s:fzf_prefix = fnamemodify(s:fzf_executable, ':h:h')
+  for s:fzf_runtime in [s:fzf_prefix, s:fzf_prefix . '/share/doc/fzf/examples']
+    if filereadable(s:fzf_runtime . '/plugin/fzf.vim')
+      execute 'set runtimepath+=' . fnameescape(s:fzf_runtime)
+      break
+    endif
+  endfor
+  unlet s:fzf_executable s:fzf_prefix s:fzf_runtime
+endif
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
